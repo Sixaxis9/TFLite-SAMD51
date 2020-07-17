@@ -1,3 +1,8 @@
+// Use main.cpp
+// Start project converted following the procedure on Microchip website
+// https://microchipsupport.force.com/s/article/C---Support-for-Atmel-START-C 
+
+
 #include <atmel_start.h>
 
 void USART_0_(void);

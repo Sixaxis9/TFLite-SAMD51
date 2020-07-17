@@ -91,7 +91,7 @@
 					<Attribute>template</Attribute>
 					<Category>source</Category>
 					<Condition>C Exe</Condition>
-					<FileContentHash>VuExjh5CrcstDKQmAL5lgg==</FileContentHash>
+					<FileContentHash>iL6w8i4CoqNKLMLOR5ZiXA==</FileContentHash>
 					<FileVersion></FileVersion>
 					<Name>samd51a/templates/main.c</Name>
 					<SelectString>Main file (.c)</SelectString>
@@ -102,7 +102,7 @@
 					<Attribute>template</Attribute>
 					<Category>source</Category>
 					<Condition>C Exe</Condition>
-					<FileContentHash>Wwcf/gxegRQ10+cCzYcFIw==</FileContentHash>
+					<FileContentHash>cR9acxcbzUvqm0rkKrLN1Q==</FileContentHash>
 					<FileVersion></FileVersion>
 					<Name>samd51a/templates/main.cpp</Name>
 					<SelectString>Main file (.cpp)</SelectString>

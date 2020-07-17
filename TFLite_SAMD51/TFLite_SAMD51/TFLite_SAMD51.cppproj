@@ -1,0 +1,1225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAMD51P20A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>TFLite_SAMD51</AssemblyName>
+    <Name>TFLite_SAMD51</Name>
+    <RootNamespace>TFLite_SAMD51</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>%24(ProjectDir)\Device_Startup</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../examples</Value>
+      <Value>../Config</Value>
+      <Value>../hal/include</Value>
+      <Value>../hal/utils/include</Value>
+      <Value>../hpl/cmcc</Value>
+      <Value>../hpl/core</Value>
+      <Value>../hpl/dmac</Value>
+      <Value>../hpl/gclk</Value>
+      <Value>../hpl/mclk</Value>
+      <Value>../hpl/osc32kctrl</Value>
+      <Value>../hpl/oscctrl</Value>
+      <Value>../hpl/pm</Value>
+      <Value>../hpl/port</Value>
+      <Value>../hpl/ramecc</Value>
+      <Value>../hpl/rtc</Value>
+      <Value>../hpl/sercom</Value>
+      <Value>../hri</Value>
+      <Value>../Init</Value>
+      <Value>../tensorflow_c_files</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../examples</Value>
+      <Value>../Config</Value>
+      <Value>../</Value>
+      <Value>../hal/include</Value>
+      <Value>../hal/utils/include</Value>
+      <Value>../hpl/cmcc</Value>
+      <Value>../hpl/core</Value>
+      <Value>../hpl/dmac</Value>
+      <Value>../hpl/gclk</Value>
+      <Value>../hpl/mclk</Value>
+      <Value>../hpl/osc32kctrl</Value>
+      <Value>../hpl/oscctrl</Value>
+      <Value>../hpl/pm</Value>
+      <Value>../hpl/port</Value>
+      <Value>../hpl/ramecc</Value>
+      <Value>../hpl/rtc</Value>
+      <Value>../hpl/sercom</Value>
+      <Value>../hri</Value>
+      <Value>../Init</Value>
+      <Value>../main_files</Value>
+      <Value>../tensorflow_c_files</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.memorysettings.ExternalRAM />
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Config\hpl_cmcc_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_dmac_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_gclk_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_mclk_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_osc32kctrl_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_oscctrl_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_port_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_rtc_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\hpl_sercom_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\peripheral_clk_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\RTE_Components.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\startup_samd51.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_samd51.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="examples\driver_examples.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="examples\driver_examples.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_atomic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_cache.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_sleep.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_usart_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_calendar.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_cmcc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_dma.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_gpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_i2c_m_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_i2c_m_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_i2c_s_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_i2c_s_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_irq.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_missing_features.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_ramecc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_reset.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_sleep.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_m_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_m_dma.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_m_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_s_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_spi_s_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_usart_async.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hpl_usart_sync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_atomic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_cache.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_gpio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_io.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_sleep.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\src\hal_usart_sync.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\err_codes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\events.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\parts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_assert.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_decrement_macro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_event.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_increment_macro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_recursion_macro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\include\utils_repeat_macro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\src\utils_assert.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\src\utils_event.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\src\utils_list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\src\utils_syscalls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\cmcc\hpl_cmcc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\core\hpl_core_m4.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\core\hpl_core_port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\core\hpl_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\dmac\hpl_dmac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\gclk\hpl_gclk.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\gclk\hpl_gclk_base.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\mclk\hpl_mclk.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\osc32kctrl\hpl_osc32kctrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\oscctrl\hpl_oscctrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\pm\hpl_pm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\pm\hpl_pm_base.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\port\hpl_gpio_base.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\ramecc\hpl_ramecc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\rtc\hpl_rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\rtc\hpl_rtc_base.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hpl\sercom\hpl_sercom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_ac_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_adc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_aes_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_ccl_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_cmcc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_dac_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_dmac_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_dsu_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_eic_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_evsys_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_freqm_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_gclk_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_hmatrixb_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_i2s_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_icm_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_mclk_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_nvmctrl_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_osc32kctrl_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_oscctrl_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_pac_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_pcc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_pdec_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_pm_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_port_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_qspi_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_ramecc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_rstc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_rtc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_sdhc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_sercom_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_supc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_tcc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_tc_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_trng_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_usb_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hri\hri_wdt_d51.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Init\atmel_start.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Init\atmel_start.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Init\atmel_start_pins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Init\driver_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Init\driver_init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main_files\magic_wand_model_data.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main_files\magic_wand_model_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main_files\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main_files\TFLite_inference.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main_files\TFLite_inference.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\core\public\version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\error_reporter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\error_reporter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\flatbuffer_conversions.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\flatbuffer_conversions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\op_resolver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\op_resolver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\profiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\tensor_utils.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\core\api\tensor_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\compatibility.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\cppmath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\max.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\min.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\optimized\neon_check.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\quantization_util.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\quantization_util.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\add.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\arg_min_max.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\binary_function.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\ceil.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\comparisons.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\concatenation.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\conv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\depthwiseconv_float.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\depthwiseconv_uint8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\dequantize.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\floor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\fully_connected.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\hard_swish.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\add.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\conv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\depthwise_conv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\fully_connected.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\l2normalization.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\logistic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\mul.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\pooling.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\integer_ops\tanh.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\l2normalization.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\logistic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\maximum_minimum.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\mul.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\neg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\pad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\pooling.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\prelu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\process_broadcast_shapes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\quantize.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\reduce.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\requantize.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\resize_nearest_neighbor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\round.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\softmax.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\strided_slice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\sub.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\reference\tanh.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\strided_slice_logic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\tensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\tensor_ctypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\internal\types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\kernel_util.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\kernel_util.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\op_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\kernels\padding.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\all_ops_resolver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\all_ops_resolver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\benchmarks\keyword_scrambled_model_data.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\benchmarks\keyword_scrambled_model_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\compatibility.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\debug_log.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\debug_log.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\activations.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\activation_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\add.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\arg_min_max.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\ceil.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\circular_buffer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\comparisons.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\concatenation.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\conv.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\depthwise_conv.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\dequantize.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\elementwise.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\ethosu.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\floor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\fully_connected.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\hard_swish.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\l2norm.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\logical.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\logistic.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\maximum_minimum.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\micro_ops.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\micro_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\mul.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\neg.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\pack.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\pad.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\pooling.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\prelu.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\quantize.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\reduce.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\reshape.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\resize_nearest_neighbor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\round.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\softmax.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\split.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\strided_slice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\sub.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\svdf.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\tanh.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\kernels\unpack.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_helpers.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_helpers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_planner\greedy_memory_planner.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_planner\greedy_memory_planner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_planner\linear_memory_planner.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_planner\linear_memory_planner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\memory_planner\memory_planner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_allocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_allocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_error_reporter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_error_reporter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_interpreter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_interpreter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_mutable_op_resolver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_optional_debug_tools.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_optional_debug_tools.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_op_resolver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_profiler.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_profiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_string.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_string.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_time.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_utils.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\micro_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\recording_micro_allocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\recording_micro_allocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\recording_micro_interpreter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\recording_simple_memory_allocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\recording_simple_memory_allocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\simple_memory_allocator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\simple_memory_allocator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\testing\micro_test.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\testing\test_conv_model.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\testing\test_conv_model.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\testing\test_utils.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\testing\test_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\test_helpers.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\micro\test_helpers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\schema\schema_generated.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\string_type.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\string_util.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\type_to_tflitetype.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow\lite\version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow_c_files\builtin_op_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow_c_files\common.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tensorflow_c_files\common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\flatbuffers\include\flatbuffers\base.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\flatbuffers\include\flatbuffers\flatbuffers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\flatbuffers\include\flatbuffers\stl_emulation.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\gemmlowp\fixedpoint\fixedpoint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\gemmlowp\fixedpoint\fixedpoint_sse.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\gemmlowp\internal\detect_platform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="third_party\ruy\ruy\profiler\instrumentation.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Device_Startup\" />
+    <Folder Include="examples\" />
+    <Folder Include="hal\" />
+    <Folder Include="hal\documentation\" />
+    <Folder Include="hal\include\" />
+    <Folder Include="hal\src\" />
+    <Folder Include="hal\utils\" />
+    <Folder Include="hal\utils\include\" />
+    <Folder Include="hal\utils\src\" />
+    <Folder Include="hpl\" />
+    <Folder Include="hpl\cmcc\" />
+    <Folder Include="hpl\core\" />
+    <Folder Include="hpl\dmac\" />
+    <Folder Include="hpl\gclk\" />
+    <Folder Include="hpl\mclk\" />
+    <Folder Include="hpl\osc32kctrl\" />
+    <Folder Include="hpl\oscctrl\" />
+    <Folder Include="hpl\pm\" />
+    <Folder Include="hpl\port\" />
+    <Folder Include="hpl\ramecc\" />
+    <Folder Include="hpl\rtc\" />
+    <Folder Include="hpl\sercom\" />
+    <Folder Include="hri\" />
+    <Folder Include="Init\" />
+    <Folder Include="main_files\" />
+    <Folder Include="tensorflow\" />
+    <Folder Include="tensorflow\core\" />
+    <Folder Include="tensorflow\core\public\" />
+    <Folder Include="tensorflow\lite\" />
+    <Folder Include="tensorflow\lite\core\" />
+    <Folder Include="tensorflow\lite\core\api\" />
+    <Folder Include="tensorflow\lite\kernels\" />
+    <Folder Include="tensorflow\lite\kernels\internal\" />
+    <Folder Include="tensorflow\lite\kernels\internal\optimized\" />
+    <Folder Include="tensorflow\lite\kernels\internal\reference\" />
+    <Folder Include="tensorflow\lite\kernels\internal\reference\integer_ops\" />
+    <Folder Include="tensorflow\lite\micro\" />
+    <Folder Include="tensorflow\lite\micro\benchmarks\" />
+    <Folder Include="tensorflow\lite\micro\kernels\" />
+    <Folder Include="tensorflow\lite\micro\memory_planner\" />
+    <Folder Include="tensorflow\lite\micro\testing\" />
+    <Folder Include="tensorflow\lite\schema\" />
+    <Folder Include="tensorflow_c_files\" />
+    <Folder Include="third_party\" />
+    <Folder Include="third_party\flatbuffers\" />
+    <Folder Include="third_party\flatbuffers\include\" />
+    <Folder Include="third_party\flatbuffers\include\flatbuffers\" />
+    <Folder Include="third_party\gemmlowp\" />
+    <Folder Include="third_party\gemmlowp\fixedpoint\" />
+    <Folder Include="third_party\gemmlowp\internal\" />
+    <Folder Include="third_party\ruy\" />
+    <Folder Include="third_party\ruy\ruy\" />
+    <Folder Include="third_party\ruy\ruy\profiler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Default.xml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\samd51p20a_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\samd51p20a_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="hal\documentation\timer.rst">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="hal\documentation\usart_sync.rst">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="TFLite_SAMD51.componentinfo.xml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="third_party\flatbuffers\LICENSE.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="third_party\gemmlowp\LICENSE">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

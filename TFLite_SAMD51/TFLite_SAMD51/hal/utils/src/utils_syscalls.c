@@ -54,6 +54,19 @@ extern void    _exit(int status);
 extern void    _kill(int pid, int sig);
 extern int     _getpid(void);
 
+// Added
+int _write(int __fd, const void *__buf, size_t __nbyte );
+int _read(int __fd, void *__buf, size_t __nbyte );
+
+int _write(int __fd, const void *__buf, size_t __nbyte ){
+	return 0;
+}
+
+int _read(int __fd, void *__buf, size_t __nbyte ){
+	return 0;
+}
+
+
 /**
  * \brief Replacement of C library of _sbrk
  */

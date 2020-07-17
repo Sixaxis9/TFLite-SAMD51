@@ -1,7 +1,8 @@
 examples/driver_examples.d examples/driver_examples.o: \
  ../examples/driver_examples.c ../examples/driver_examples.h \
- ../driver_init.h ../atmel_start_pins.h ../hal/include/hal_gpio.h \
- ../hal/include/hpl_gpio.h ../hal/utils/include/compiler.h \
+ ../Init/driver_init.h ../Init/atmel_start_pins.h \
+ ../hal/include/hal_gpio.h ../hal/include/hpl_gpio.h \
+ ../hal/utils/include/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
@@ -142,9 +143,9 @@ examples/driver_examples.d examples/driver_examples.o: \
 
 ../examples/driver_examples.h:
 
-../driver_init.h:
+../Init/driver_init.h:
 
-../atmel_start_pins.h:
+../Init/atmel_start_pins.h:
 
 ../hal/include/hal_gpio.h:
 
