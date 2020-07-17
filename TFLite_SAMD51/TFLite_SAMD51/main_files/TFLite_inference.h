@@ -11,4 +11,4 @@
 
 void setup_inference();
 
-void run_inference();
+float *run_inference();

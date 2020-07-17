@@ -123,110 +123,111 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <ArmGccCpp>
-        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
-        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
-        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
-        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
-        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
-        <armgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </armgcc.compiler.symbols.DefSymbols>
-        <armgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-            <Value>../examples</Value>
-            <Value>../Config</Value>
-            <Value>../hal/include</Value>
-            <Value>../hal/utils/include</Value>
-            <Value>../hpl/cmcc</Value>
-            <Value>../hpl/core</Value>
-            <Value>../hpl/dmac</Value>
-            <Value>../hpl/gclk</Value>
-            <Value>../hpl/mclk</Value>
-            <Value>../hpl/osc32kctrl</Value>
-            <Value>../hpl/oscctrl</Value>
-            <Value>../hpl/pm</Value>
-            <Value>../hpl/port</Value>
-            <Value>../hpl/ramecc</Value>
-            <Value>../hpl/rtc</Value>
-            <Value>../hpl/sercom</Value>
-            <Value>../hri</Value>
-            <Value>../Init</Value>
-            <Value>../tensorflow_c_files</Value>
-          </ListValues>
-        </armgcc.compiler.directories.IncludePaths>
-        <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
-        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
-        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-        <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
-        <armgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </armgcccpp.compiler.symbols.DefSymbols>
-        <armgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-            <Value>../examples</Value>
-            <Value>../Config</Value>
-            <Value>../</Value>
-            <Value>../hal/include</Value>
-            <Value>../hal/utils/include</Value>
-            <Value>../hpl/cmcc</Value>
-            <Value>../hpl/core</Value>
-            <Value>../hpl/dmac</Value>
-            <Value>../hpl/gclk</Value>
-            <Value>../hpl/mclk</Value>
-            <Value>../hpl/osc32kctrl</Value>
-            <Value>../hpl/oscctrl</Value>
-            <Value>../hpl/pm</Value>
-            <Value>../hpl/port</Value>
-            <Value>../hpl/ramecc</Value>
-            <Value>../hpl/rtc</Value>
-            <Value>../hpl/sercom</Value>
-            <Value>../hri</Value>
-            <Value>../Init</Value>
-            <Value>../main_files</Value>
-            <Value>../tensorflow_c_files</Value>
-          </ListValues>
-        </armgcccpp.compiler.directories.IncludePaths>
-        <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
-        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
-        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
-        <armgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </armgcccpp.linker.libraries.Libraries>
-        <armgcccpp.linker.libraries.LibrarySearchPaths>
-          <ListValues>
-            <Value>%24(ProjectDir)\Device_Startup</Value>
-          </ListValues>
-        </armgcccpp.linker.libraries.LibrarySearchPaths>
-        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
-        <armgcccpp.linker.memorysettings.ExternalRAM />
-        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
-        <armgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcccpp.assembler.general.IncludePaths>
-        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
-        <armgcccpp.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
-          </ListValues>
-        </armgcccpp.preprocessingassembler.general.IncludePaths>
-        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
-      </ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../examples</Value>
+      <Value>../Config</Value>
+      <Value>../hal/include</Value>
+      <Value>../hal/utils/include</Value>
+      <Value>../hpl/cmcc</Value>
+      <Value>../hpl/core</Value>
+      <Value>../hpl/dmac</Value>
+      <Value>../hpl/gclk</Value>
+      <Value>../hpl/mclk</Value>
+      <Value>../hpl/osc32kctrl</Value>
+      <Value>../hpl/oscctrl</Value>
+      <Value>../hpl/pm</Value>
+      <Value>../hpl/port</Value>
+      <Value>../hpl/ramecc</Value>
+      <Value>../hpl/rtc</Value>
+      <Value>../hpl/sercom</Value>
+      <Value>../hri</Value>
+      <Value>../Init</Value>
+      <Value>../tensorflow_c_files</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+      <Value>../examples</Value>
+      <Value>../Config</Value>
+      <Value>../</Value>
+      <Value>../hal/include</Value>
+      <Value>../hal/utils/include</Value>
+      <Value>../hpl/cmcc</Value>
+      <Value>../hpl/core</Value>
+      <Value>../hpl/dmac</Value>
+      <Value>../hpl/gclk</Value>
+      <Value>../hpl/mclk</Value>
+      <Value>../hpl/osc32kctrl</Value>
+      <Value>../hpl/oscctrl</Value>
+      <Value>../hpl/pm</Value>
+      <Value>../hpl/port</Value>
+      <Value>../hpl/ramecc</Value>
+      <Value>../hpl/rtc</Value>
+      <Value>../hpl/sercom</Value>
+      <Value>../hri</Value>
+      <Value>../Init</Value>
+      <Value>../main_files</Value>
+      <Value>../tensorflow_c_files</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</armgcccpp.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.memorysettings.ExternalRAM />
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD51_DFP\1.2.139\samd51a\include</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>

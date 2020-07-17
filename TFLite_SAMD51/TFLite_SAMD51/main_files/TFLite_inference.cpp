@@ -23,6 +23,8 @@ limitations under the License.
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 
+float fArray[1024];
+
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
 tflite::ErrorReporter* error_reporter = nullptr;
@@ -34,8 +36,8 @@ int input_length;
 // Create an area of memory to use for input, output, and intermediate arrays.
 // The size of this will depend on the model you're using, and may need to be
 // determined by experimentation.
-constexpr int kTensorArenaSize = 60 * 1024;
-uint8_t tensor_arena[kTensorArenaSize];
+constexpr int kTensorArenaSize = 100 * 1024;
+alignas(8) uint8_t tensor_arena[kTensorArenaSize];
 }  // namespace
 
 // The name of this function is important for Arduino compatibility.
@@ -63,9 +65,9 @@ void setup_inference() {
   // needed by this graph.
   static tflite::MicroMutableOpResolver<5> micro_op_resolver;  // NOLINT
   micro_op_resolver.AddConv2D();
-  micro_op_resolver.AddDepthwiseConv2D();
   micro_op_resolver.AddFullyConnected();
   micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddReshape();
   micro_op_resolver.AddSoftmax();
 
   // Build an interpreter to run the model with.
@@ -78,14 +80,16 @@ void setup_inference() {
 
   // Obtain pointer to the model's input tensor.
   model_input = interpreter->input(0);
-  if ((model_input->dims->size != 4) || (model_input->dims->data[0] != 1) ||
+  
+  // TODO: check dimension
+/*  if ((model_input->dims->size != 4) || (model_input->dims->data[0] != 1) ||
       (model_input->dims->data[1] != 128) ||
       (model_input->dims->data[2] != 3) || //kChannelNumber
       (model_input->type != kTfLiteFloat32)) {
     TF_LITE_REPORT_ERROR(error_reporter,
                          "Bad input tensor parameters in model");
     return;
-  }
+  }*/
 
   input_length = model_input->bytes / sizeof(float);
 
@@ -95,7 +99,7 @@ void setup_inference() {
   }*/
 }
 
-void run_inference() {
+float *run_inference() {
   // Attempt to read new data from the accelerometer.
   //bool got_data =
       //ReadAccelerometer(error_reporter, model_input->data.f, input_length);
@@ -103,12 +107,18 @@ void run_inference() {
   //if (!got_data) return;
 
   // Run inference, and report any error.
+  
+	model_input->data.f = fArray;
+		
   TfLiteStatus invoke_status = interpreter->Invoke();
   if (invoke_status != kTfLiteOk) {
     TF_LITE_REPORT_ERROR(error_reporter, "Invoke failed on index: %d\n",
                          0); //begin_index
-    return;
+    //return 1;
   }
+  
+  return interpreter->output(0)->data.f;
+  
   // Analyze the results to obtain a prediction
   //int gesture_index = PredictGesture(interpreter->output(0)->data.f);
 

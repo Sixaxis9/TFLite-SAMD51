@@ -14,6 +14,8 @@ void USART_0_(void);
 extern struct usart_sync_descriptor USART_0;
 struct io_descriptor *io;
 
+extern float fArray[1024];
+
 int main(void)
 {
 	/* Initializes MCU, drivers and middleware */
@@ -22,10 +24,36 @@ int main(void)
 	
 	setup_inference();
 	
+	uint8_t image_serial[1024];
+	
 	/* Replace with your application code */
 	while (1) {
 		
-		run_inference();
+		
+		io_read(io, image_serial, 1024);
+		//io_write(io, image_serial, 1024);
+		
+		// instantiate float array    
+for(int i = 0; i < 1024; ++i) {
+    fArray[i] = (float)(((float)image_serial[i])/255.0);
+}
+		float *output = run_inference();
+		
+		  uint8_t best_output = 0;
+		  float accuracy = 0;
+		  
+		  for (int i = 0; i < 43; i++)
+		  {
+			  if (accuracy < output[i])
+			  {
+				  accuracy = output[i];
+				  best_output = i;
+			  }
+		  }
+		  
+		  io_write(io, &best_output, 1);
+		  //io_write(io, &accuracy, sizeof(float));
+		  //io_write(io, &cycles_count, sizeof(uint32_t));
 		
 		io_write(io, (uint8_t *)"Toggle LED!\n", 12);
 		gpio_toggle_pin_level(LED);
