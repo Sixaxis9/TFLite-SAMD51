@@ -51,11 +51,19 @@ for(int i = 0; i < 1024; ++i) {
 			  }
 		  }
 		  
-		  io_write(io, &best_output, 1);
-		  //io_write(io, &accuracy, sizeof(float));
-		  //io_write(io, &cycles_count, sizeof(uint32_t));
+		  
+		uint8_t accuracy_1[4];
+
+		memcpy(accuracy_1, &accuracy, 4);
+
 		
-		io_write(io, (uint8_t *)"Toggle LED!\n", 12);
+		uint8_t cicle_count[4] = {0x00, 0x00, 0x00, 0x20};
+
+		  io_write(io, &best_output, 1);
+		  io_write(io, accuracy_1, 4);		  
+		  io_write(io, cicle_count, 4);
+		
+		//io_write(io, (uint8_t *)"Toggle LED!\n", 12);
 		gpio_toggle_pin_level(LED);
 		delay_ms(100);
 	}
