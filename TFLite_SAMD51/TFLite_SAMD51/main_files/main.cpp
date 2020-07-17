@@ -63,9 +63,9 @@ for(int i = 0; i < 1024; ++i) {
 		  io_write(io, accuracy_1, 4);		  
 		  io_write(io, cicle_count, 4);
 		
-		//io_write(io, (uint8_t *)"Toggle LED!\n", 12);
 		gpio_toggle_pin_level(LED);
-		delay_ms(100);
+		//io_write(io, (uint8_t *)"Toggle LED!\n", 12);
+		//delay_ms(100);
 	}
 }
 
