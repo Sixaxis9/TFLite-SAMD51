@@ -195,7 +195,11 @@ main_files/TFLite_inference.d main_files/TFLite_inference.o: \
  .././tensorflow/lite/micro/micro_mutable_op_resolver.h \
  ../tensorflow/lite/micro/kernels/micro_ops.h \
  .././tensorflow/lite/schema/schema_generated.h \
- .././tensorflow/lite/version.h ../tensorflow/core/public/version.h
+ .././tensorflow/lite/version.h ../tensorflow/core/public/version.h \
+ ../tensorflow/lite/micro/micro_error_reporter.h \
+ ../tensorflow/lite/micro/micro_interpreter.h \
+ ../tensorflow/lite/micro/micro_mutable_op_resolver.h \
+ ../tensorflow/lite/version.h
 
 ../main_files/TFLite_inference.h:
 
@@ -594,3 +598,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 .././tensorflow/lite/version.h:
 
 ../tensorflow/core/public/version.h:
+
+../tensorflow/lite/micro/micro_error_reporter.h:
+
+../tensorflow/lite/micro/micro_interpreter.h:
+
+../tensorflow/lite/micro/micro_mutable_op_resolver.h:
+
+../tensorflow/lite/version.h:

@@ -54,11 +54,14 @@ extern void    _exit(int status);
 extern void    _kill(int pid, int sig);
 extern int     _getpid(void);
 
+extern struct io_descriptor *io;
+
 // Added
 int _write(int __fd, const void *__buf, size_t __nbyte );
 int _read(int __fd, void *__buf, size_t __nbyte );
 
 int _write(int __fd, const void *__buf, size_t __nbyte ){
+	io_write(io, __buf, __nbyte);
 	return 0;
 }
 
