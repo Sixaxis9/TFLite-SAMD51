@@ -13,9 +13,9 @@ tensorflow/lite/micro/kernels/dequantize.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\vector \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\stl_algobase.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++config.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\os_defines.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\cpu_defines.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++config.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\os_defines.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\cpu_defines.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\functexcept.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\exception_defines.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\cpp_type_traits.h \
@@ -33,7 +33,7 @@ tensorflow/lite/micro/kernels/dequantize.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\debug\debug.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\predefined_ops.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\allocator.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++allocator.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++allocator.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\new_allocator.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\new \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\exception \
@@ -82,7 +82,7 @@ tensorflow/lite/micro/kernels/dequantize.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\localefwd.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++locale.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++locale.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\clocale \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\locale.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
@@ -93,9 +93,9 @@ tensorflow/lite/micro/kernels/dequantize.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\cxxabi_forced.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\basic_string.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\atomicity.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\gthr.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\gthr-default.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\atomic_word.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\gthr.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\gthr-default.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\atomic_word.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\string_conversions.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstdlib \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h \
@@ -165,11 +165,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\stl_algobase.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++config.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++config.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\os_defines.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\os_defines.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\cpu_defines.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\cpu_defines.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\functexcept.h:
 
@@ -205,7 +205,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\allocator.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++allocator.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++allocator.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\new_allocator.h:
 
@@ -303,7 +303,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\localefwd.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++locale.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\c++locale.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\clocale:
 
@@ -325,11 +325,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\atomicity.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\gthr.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\gthr.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\gthr-default.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\gthr-default.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\atomic_word.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\fpv4-sp\hard\bits\atomic_word.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\ext\string_conversions.h:
 

@@ -162,7 +162,7 @@
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -mfloat-abi=softfp -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -mfloat-abi=hard -mfpu=fpv4-sp-d16</armgcc.compiler.miscellaneous.OtherFlags>
   <armgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>DEBUG</Value>
@@ -199,7 +199,7 @@
   <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
   <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
-  <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</armgcccpp.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11 -mfloat-abi=hard -mfpu=fpv4-sp-d16</armgcccpp.compiler.miscellaneous.OtherFlags>
   <armgcccpp.linker.libraries.Libraries>
     <ListValues>
       <Value>libm</Value>
@@ -211,8 +211,9 @@
     </ListValues>
   </armgcccpp.linker.libraries.LibrarySearchPaths>
   <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.optimization.EnableFastMath>True</armgcccpp.linker.optimization.EnableFastMath>
   <armgcccpp.linker.memorysettings.ExternalRAM />
-  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd51p20a_flash.ld -mfloat-abi=hard -mfpu=fpv4-sp-d16</armgcccpp.linker.miscellaneous.LinkerFlags>
   <armgcccpp.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
