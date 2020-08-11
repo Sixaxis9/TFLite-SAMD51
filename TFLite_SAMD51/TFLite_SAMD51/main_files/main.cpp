@@ -35,7 +35,9 @@ int main(void)
 		
 		// instantiate float array    
 for(int i = 0; i < 1024; ++i) {
-    fArray[i] = (float)(((float)image_serial[i])/255.0);
+    //fArray[i] = (float)(((float)image_serial[i])/255.0);
+    fArray[i] = image_serial[i] >> 1;
+
 }
 		float *output = run_inference();
 		

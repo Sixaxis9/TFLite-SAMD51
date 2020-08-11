@@ -37,7 +37,7 @@ int input_length;
 // The size of this will depend on the model you're using, and may need to be
 // determined by experimentation.
 constexpr int kTensorArenaSize = 100 * 1024;
-alignas(8) uint8_t tensor_arena[kTensorArenaSize];
+alignas(16) uint8_t tensor_arena[kTensorArenaSize];
 }  // namespace
 
 // The name of this function is important for Arduino compatibility.
@@ -63,12 +63,16 @@ void setup_inference() {
   // An easier approach is to just use the AllOpsResolver, but this will
   // incur some penalty in code space for op implementations that are not
   // needed by this graph.
-  static tflite::MicroMutableOpResolver<5> micro_op_resolver;  // NOLINT
+  static tflite::MicroMutableOpResolver<8> micro_op_resolver;  // NOLINT
   micro_op_resolver.AddConv2D();
   micro_op_resolver.AddFullyConnected();
   micro_op_resolver.AddMaxPool2D();
   micro_op_resolver.AddReshape();
   micro_op_resolver.AddSoftmax();
+  micro_op_resolver.AddRelu();
+  micro_op_resolver.AddQuantize();
+  micro_op_resolver.AddDequantize();
+  
 
   // Build an interpreter to run the model with.
   static tflite::MicroInterpreter static_interpreter(
