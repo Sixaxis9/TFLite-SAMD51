@@ -6,8 +6,9 @@
  */ 
 
 #include "atmel_start.h"
-
+#include <string.h>
 #include "TFLite_inference.h"
+#include "tensorflow/lite/micro/debug_log.h"
 
 void USART_0_(void);
 
@@ -15,13 +16,14 @@ extern struct usart_sync_descriptor USART_0;
 struct io_descriptor *io;
 
 extern float fArray[1024];
+extern int8_t iArray[1024];
 
 int main(void)
 {
 	/* Initializes MCU, drivers and middleware */
 	atmel_start_init();
 	USART_0_();
-	
+	DebugLog("Hello");
 	setup_inference();
 	
 	uint8_t image_serial[1024];
@@ -35,12 +37,13 @@ int main(void)
 		
 		// instantiate float array    
 for(int i = 0; i < 1024; ++i) {
-    fArray[i] = (float)(((float)image_serial[i])/255.0);
+    //fArray[i] = (float)(((float)image_serial[i])/255.0);
+    iArray[i] = (int8_t) (image_serial[i] >> 1);
 }
-		float *output = run_inference();
+		int8_t *output = run_inference();
 		
 		  uint8_t best_output = 0;
-		  float accuracy = 0;
+		  int8_t accuracy = -128;
 		  
 		  for (int i = 0; i < 43; i++)
 		  {
@@ -73,4 +76,10 @@ void USART_0_(void)
 {
 	usart_sync_get_io_descriptor(&USART_0, &io);
 	usart_sync_enable(&USART_0);
+}
+
+extern "C"{ void DebugLog(const char *s){
+	io_write(io, (uint8_t *) s, strlen(s));
+}
+	
 }

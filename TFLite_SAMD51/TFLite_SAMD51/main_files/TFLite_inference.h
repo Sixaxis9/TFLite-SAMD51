@@ -11,4 +11,4 @@
 
 void setup_inference();
 
-float *run_inference();
+int8_t *run_inference();

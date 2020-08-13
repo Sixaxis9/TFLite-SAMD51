@@ -1,15 +1,15 @@
 main_files/TFLite_inference.d main_files/TFLite_inference.o: \
  ../main_files/TFLite_inference.cpp ../main_files/TFLite_inference.h \
  ../TensorFlowLite.h ../main_files/magic_wand_model_data.h \
- .././tensorflow/lite/micro/micro_error_reporter.h \
+ ../TF/./tensorflow/lite/micro/micro_error_reporter.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstdarg \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\c++config.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\os_defines.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\arm-none-eabi\thumb\v7e-m\bits\cpu_defines.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdarg.h \
- ../tensorflow/lite/core/api/error_reporter.h \
- ../tensorflow/lite/micro/compatibility.h \
- .././tensorflow/lite/micro/micro_interpreter.h \
+ ../TF/tensorflow/lite/core/api/error_reporter.h \
+ ../TF/tensorflow/lite/micro/compatibility.h \
+ ../TF/./tensorflow/lite/micro/micro_interpreter.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstddef \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstdint \
@@ -20,8 +20,8 @@ main_files/TFLite_inference.d main_files/TFLite_inference.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_newlib_version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
- ../third_party/flatbuffers/include/flatbuffers/flatbuffers.h \
- ../third_party/flatbuffers/include/flatbuffers/base.h \
+ ../TF/third_party/flatbuffers/include/flatbuffers/flatbuffers.h \
+ ../TF/third_party/flatbuffers/include/flatbuffers/base.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\assert.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
@@ -163,34 +163,34 @@ main_files/TFLite_inference.d main_files/TFLite_inference.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\shared_ptr_atomic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\atomic_base.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\backward\auto_ptr.h \
- ../third_party/flatbuffers/include/flatbuffers/stl_emulation.h \
- ../tensorflow_c_files/common.h \
+ ../TF/third_party/flatbuffers/include/flatbuffers/stl_emulation.h \
+ ../TF/tensorflow/lite/c/common.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdbool.h \
- ../tensorflow/lite/core/api/profiler.h \
- ../tensorflow/lite/kernels/internal/tensor_ctypes.h \
- ../tensorflow/lite/kernels/internal/types.h \
- ../tensorflow/lite/kernels/internal/compatibility.h \
- ../tensorflow/lite/kernels/op_macros.h \
- ../tensorflow/lite/micro/micro_allocator.h \
- ../tensorflow/lite/micro/micro_op_resolver.h \
- ../tensorflow/lite/core/api/flatbuffer_conversions.h \
- ../tensorflow/lite/schema/schema_generated.h \
- ../tensorflow/lite/core/api/op_resolver.h \
- ../tensorflow/lite/micro/simple_memory_allocator.h \
- ../tensorflow/lite/type_to_tflitetype.h \
+ ../TF/tensorflow/lite/core/api/profiler.h \
+ ../TF/tensorflow/lite/kernels/internal/tensor_ctypes.h \
+ ../TF/tensorflow/lite/kernels/internal/types.h \
+ ../TF/tensorflow/lite/kernels/internal/compatibility.h \
+ ../TF/tensorflow/lite/kernels/op_macros.h \
+ ../TF/tensorflow/lite/micro/micro_allocator.h \
+ ../TF/tensorflow/lite/micro/micro_op_resolver.h \
+ ../TF/tensorflow/lite/core/api/flatbuffer_conversions.h \
+ ../TF/tensorflow/lite/schema/schema_generated.h \
+ ../TF/tensorflow/lite/core/api/op_resolver.h \
+ ../TF/tensorflow/lite/micro/simple_memory_allocator.h \
+ ../TF/tensorflow/lite/type_to_tflitetype.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\complex \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cmath \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\sstream \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\sstream.tcc \
- .././tensorflow/lite/micro/micro_mutable_op_resolver.h \
- ../tensorflow/lite/micro/kernels/micro_ops.h \
- .././tensorflow/lite/schema/schema_generated.h \
- .././tensorflow/lite/version.h ../tensorflow/core/public/version.h \
- ../tensorflow/lite/micro/micro_error_reporter.h \
- ../tensorflow/lite/micro/micro_interpreter.h \
- ../tensorflow/lite/micro/micro_mutable_op_resolver.h \
- ../tensorflow/lite/version.h
+ ../TF/./tensorflow/lite/micro/micro_mutable_op_resolver.h \
+ ../TF/tensorflow/lite/micro/kernels/micro_ops.h \
+ ../TF/./tensorflow/lite/schema/schema_generated.h \
+ ../TF/./tensorflow/lite/version.h ../TF/tensorflow/core/public/version.h \
+ ../TF/tensorflow/lite/micro/micro_error_reporter.h \
+ ../TF/tensorflow/lite/micro/micro_interpreter.h \
+ ../TF/tensorflow/lite/micro/micro_mutable_op_resolver.h \
+ ../TF/tensorflow/lite/version.h
 
 ../main_files/TFLite_inference.h:
 
@@ -198,7 +198,7 @@ main_files/TFLite_inference.d main_files/TFLite_inference.o: \
 
 ../main_files/magic_wand_model_data.h:
 
-.././tensorflow/lite/micro/micro_error_reporter.h:
+../TF/./tensorflow/lite/micro/micro_error_reporter.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstdarg:
 
@@ -210,11 +210,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdarg.h:
 
-../tensorflow/lite/core/api/error_reporter.h:
+../TF/tensorflow/lite/core/api/error_reporter.h:
 
-../tensorflow/lite/micro/compatibility.h:
+../TF/tensorflow/lite/micro/compatibility.h:
 
-.././tensorflow/lite/micro/micro_interpreter.h:
+../TF/./tensorflow/lite/micro/micro_interpreter.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\cstddef:
 
@@ -236,9 +236,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h:
 
-../third_party/flatbuffers/include/flatbuffers/flatbuffers.h:
+../TF/third_party/flatbuffers/include/flatbuffers/flatbuffers.h:
 
-../third_party/flatbuffers/include/flatbuffers/base.h:
+../TF/third_party/flatbuffers/include/flatbuffers/base.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\assert.h:
 
@@ -522,35 +522,35 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\backward\auto_ptr.h:
 
-../third_party/flatbuffers/include/flatbuffers/stl_emulation.h:
+../TF/third_party/flatbuffers/include/flatbuffers/stl_emulation.h:
 
-../tensorflow_c_files/common.h:
+../TF/tensorflow/lite/c/common.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdbool.h:
 
-../tensorflow/lite/core/api/profiler.h:
+../TF/tensorflow/lite/core/api/profiler.h:
 
-../tensorflow/lite/kernels/internal/tensor_ctypes.h:
+../TF/tensorflow/lite/kernels/internal/tensor_ctypes.h:
 
-../tensorflow/lite/kernels/internal/types.h:
+../TF/tensorflow/lite/kernels/internal/types.h:
 
-../tensorflow/lite/kernels/internal/compatibility.h:
+../TF/tensorflow/lite/kernels/internal/compatibility.h:
 
-../tensorflow/lite/kernels/op_macros.h:
+../TF/tensorflow/lite/kernels/op_macros.h:
 
-../tensorflow/lite/micro/micro_allocator.h:
+../TF/tensorflow/lite/micro/micro_allocator.h:
 
-../tensorflow/lite/micro/micro_op_resolver.h:
+../TF/tensorflow/lite/micro/micro_op_resolver.h:
 
-../tensorflow/lite/core/api/flatbuffer_conversions.h:
+../TF/tensorflow/lite/core/api/flatbuffer_conversions.h:
 
-../tensorflow/lite/schema/schema_generated.h:
+../TF/tensorflow/lite/schema/schema_generated.h:
 
-../tensorflow/lite/core/api/op_resolver.h:
+../TF/tensorflow/lite/core/api/op_resolver.h:
 
-../tensorflow/lite/micro/simple_memory_allocator.h:
+../TF/tensorflow/lite/micro/simple_memory_allocator.h:
 
-../tensorflow/lite/type_to_tflitetype.h:
+../TF/tensorflow/lite/type_to_tflitetype.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\complex:
 
@@ -562,20 +562,20 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\c++\6.3.1\bits\sstream.tcc:
 
-.././tensorflow/lite/micro/micro_mutable_op_resolver.h:
+../TF/./tensorflow/lite/micro/micro_mutable_op_resolver.h:
 
-../tensorflow/lite/micro/kernels/micro_ops.h:
+../TF/tensorflow/lite/micro/kernels/micro_ops.h:
 
-.././tensorflow/lite/schema/schema_generated.h:
+../TF/./tensorflow/lite/schema/schema_generated.h:
 
-.././tensorflow/lite/version.h:
+../TF/./tensorflow/lite/version.h:
 
-../tensorflow/core/public/version.h:
+../TF/tensorflow/core/public/version.h:
 
-../tensorflow/lite/micro/micro_error_reporter.h:
+../TF/tensorflow/lite/micro/micro_error_reporter.h:
 
-../tensorflow/lite/micro/micro_interpreter.h:
+../TF/tensorflow/lite/micro/micro_interpreter.h:
 
-../tensorflow/lite/micro/micro_mutable_op_resolver.h:
+../TF/tensorflow/lite/micro/micro_mutable_op_resolver.h:
 
-../tensorflow/lite/version.h:
+../TF/tensorflow/lite/version.h:

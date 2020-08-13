@@ -24,6 +24,7 @@ limitations under the License.
 #include "tensorflow/lite/version.h"
 
 float fArray[1024];
+int8_t iArray[1024];
 
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
@@ -37,7 +38,7 @@ int input_length;
 // The size of this will depend on the model you're using, and may need to be
 // determined by experimentation.
 constexpr int kTensorArenaSize = 100 * 1024;
-alignas(8) uint8_t tensor_arena[kTensorArenaSize];
+alignas(16) uint8_t tensor_arena[kTensorArenaSize];
 }  // namespace
 
 // The name of this function is important for Arduino compatibility.
@@ -99,7 +100,7 @@ void setup_inference() {
   }*/
 }
 
-float *run_inference() {
+int8_t *run_inference() {
   // Attempt to read new data from the accelerometer.
   //bool got_data =
       //ReadAccelerometer(error_reporter, model_input->data.f, input_length);
@@ -108,16 +109,16 @@ float *run_inference() {
 
   // Run inference, and report any error.
   
-	model_input->data.f = fArray;
-		
+	//model_input->data.f = fArray;
+	model_input->data.int8 = iArray;
   TfLiteStatus invoke_status = interpreter->Invoke();
   if (invoke_status != kTfLiteOk) {
     TF_LITE_REPORT_ERROR(error_reporter, "Invoke failed on index: %d\n",
                          0); //begin_index
     //return 1;
   }
-  
-  return interpreter->output(0)->data.f;
+//  return interpreter->output(0)->data.f;
+  return interpreter->output(0)->data.int8;
   
   // Analyze the results to obtain a prediction
   //int gesture_index = PredictGesture(interpreter->output(0)->data.f);
